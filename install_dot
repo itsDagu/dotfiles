@@ -1,0 +1,21 @@
+#!/bin/sh
+path=$(pwd)
+
+# Home directory
+ln -sf $path/config/nvim/init.vim $HOME/.vimrc
+ln -sf $path/.xinitrc $HOME/.xinitrc
+ln -sf $path/.zcompdump $HOME/.zcompdump
+ln -sf $path/.zprofile $HOME/.zprofile
+ln -sf $path/.zshrc $HOME/.zshrc
+
+# Config directory
+[ ! -d $HOME/.config ] && mkdir $HOME/.config
+
+[ -d $HOME/.config/nvim ] && rm -rf $HOME/.config/nvim
+ln -sf $path/config/nvim $HOME/.config/nvim
+
+[ -d $HOME/.config/shellconfig ] && rm -rf $HOME/.config/shellconfig
+ln -sf $path/config/shellconfig $HOME/.config/shellconfig
+
+[ -d $HOME/.config/zathura ] && rm -rf $HOME/.config/zathura
+ln -sf $path/config/zathura/ $HOME/.config/zathura/
