@@ -1,0 +1,11 @@
+alias v='nvim'
+alias r='ranger'
+alias pman='sudo pacman'
+alias pip='sudo pip'
+
+alias sc='source /home/dagu/.zshrc'
+alias sp='source /home/dagu/.zprofile'
+alias vc='nvim ~/.config'
+
+alias cc='cd ~'
+alias ll='ls -alh'
